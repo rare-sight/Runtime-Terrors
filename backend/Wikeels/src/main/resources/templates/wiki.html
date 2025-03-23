@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wikeels</title>
+</head>
+<body>
+    <h1>Search Wikipedia</h1>
+    <form action="/wiki/search" method="get">
+        <input type="text" name="query" placeholder="Search Wikipedia">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Result:</h2>
+    <h3 th:text="${title}"></h3>
+    <p th:text="${description}"></p>
+    <img th:if="${imageUrl}" th:src="${imageUrl}" alt="Wikipedia Image">
+</body>
+</html>
